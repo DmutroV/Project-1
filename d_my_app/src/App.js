@@ -1,7 +1,12 @@
-import { useState } from 'react';
-import './App.css';
+import { useEffect, useState } from 'react';
+import { Routes,Route } from 'react-router-dom';
+
 import Header from './Components/Header/Header';
 import ProductList from './Components/ProductList/ProductList';
+
+
+import './App.css';
+import AboutUs from './Components/pages/AboutUs/AboutUs';
 
 function App() {
 
@@ -14,16 +19,31 @@ const [products, setProducts] = useState([
 
 ]); 
 
+const [name,setName] = useState ('Nikname');
+
+
 const deleteProduct = (productId) => {
     const newProducts = products.filter(product => product.id !== productId);
     setProducts (newProducts);
 }
 
-return (
-    <div className="App">
-      <Header/>
-      <ProductList products = {products} deleteProduct = {deleteProduct}/>
+useEffect(() => { 
+  console.log('use Effect');
+},[name]);
 
+return (
+    <div>
+      <Header/>
+      
+        <Routes>
+        <Route path='/about' element = {<AboutUs/>}>   </Route>
+        <Route path = "/" element ={<ProductList products = {products} deleteProduct = {deleteProduct}/>}>
+
+          </Route>
+        </Routes>
+        
+      <button onClick={ () => setName ('My name')}> Set Name </button>
+      <p>Name: {name}</p>
     </div>
   );
 }
