@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Routes, Link} from "react-router-dom";
+import {Routes, Link} from "react-router-dom";
 import logo  from "./logo2.png"
 import "./Header.scss"
 //хук (скритий ф-ціонал кнопи)

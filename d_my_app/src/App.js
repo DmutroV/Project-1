@@ -3,8 +3,6 @@ import { Routes,Route } from 'react-router-dom';
 
 import Header from './Components/Header/Header';
 import ProductList from './Components/ProductList/ProductList';
-
-
 import './App.css';
 import AboutUs from './Components/pages/AboutUs/AboutUs';
 
@@ -15,7 +13,7 @@ const [products, setProducts] = useState([
 {id: 2, title: 'Product 2', price: 427 },
 {id: 3, title: 'Product 3', price: 876 },
 {id: 4, title: 'Product 4', price: 563 },
-{id: 5, title: 'Product 5', price: 233 }
+{id: 5, title: 'Product 5', price: 233 } 
 
 ]); 
 

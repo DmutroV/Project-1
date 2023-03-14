@@ -5,6 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 
 import "./index.css";
 import App from "./App";
+import './index.css';
+import "bulma/css/bulma.css";
 
 ReactDOM.render(
   <BrowserRouter>
